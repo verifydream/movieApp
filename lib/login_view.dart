@@ -1,5 +1,3 @@
-import 'package:bookingnonton/home_screen.dart';
-import 'package:bookingnonton/registration_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
