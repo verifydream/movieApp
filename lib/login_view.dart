@@ -18,10 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     // Contoh validasi sederhana
     if (username == "user" && password == "password") {
       // Jika username dan password cocok, lanjutkan ke halaman home
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomeView()),
-      );
+      Navigator.pushReplacementNamed(context, '/home');
     } else {
       // Jika username dan password tidak cocok, tampilkan Snackbar
       ScaffoldMessenger.of(context).showSnackBar(
@@ -33,10 +30,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _navigateToRegistrationPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegistrationView()),
-    );
+    Navigator.pushNamed(context, '/registration');
   }
 
   @override
