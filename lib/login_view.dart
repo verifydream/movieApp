@@ -1,17 +1,4 @@
-import 'package:bookingnonton/home_screen.dart';
-import 'package:bookingnonton/registration_view.dart';
 import 'package:flutter/material.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoginPage(),
-    );
-  }
-}
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,10 +16,7 @@ class _LoginPageState extends State<LoginPage> {
     // Contoh validasi sederhana
     if (username == "user" && password == "password") {
       // Jika username dan password cocok, lanjutkan ke halaman home
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomeView()),
-      );
+      Navigator.pushReplacementNamed(context, '/home');
     } else {
       // Jika username dan password tidak cocok, tampilkan Snackbar
       ScaffoldMessenger.of(context).showSnackBar(
@@ -44,10 +28,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _navigateToRegistrationPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegistrationView()),
-    );
+    Navigator.pushNamed(context, '/registration');
   }
 
   @override
@@ -86,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: _login,
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red[500],
+                  backgroundColor: Colors.red[500],
                 ),
                 child: Text('Login'),
               ),
