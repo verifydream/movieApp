@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: RegistrationView(),
-    );
-  }
-}
-
 class RegistrationView extends StatefulWidget {
   @override
   _RegistrationPageState createState() => _RegistrationPageState();
@@ -110,7 +99,7 @@ class _RegistrationPageState extends State<RegistrationView> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _registerUser,
-                style: ElevatedButton.styleFrom(primary: Colors.red[600]),
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.red[600]),
                 child: Text('Daftar'),
               ),
               SizedBox(height: 10),

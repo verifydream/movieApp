@@ -2,17 +2,6 @@ import 'package:bookingnonton/home_screen.dart';
 import 'package:bookingnonton/registration_view.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoginPage(),
-    );
-  }
-}
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -86,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
               ElevatedButton(
                 onPressed: _login,
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.red[500],
+                  backgroundColor: Colors.red[500],
                 ),
                 child: Text('Login'),
               ),

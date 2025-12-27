@@ -1,21 +1,5 @@
-// import 'package:bookingnonton/home_screen.dart';
-import 'package:bookingnonton/home_screen.dart';
-import 'package:bookingnonton/login_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'dart:async';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SplashScreen(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -28,10 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Delay selama 3 detik untuk menampilkan splash screen
     Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomeView()),
-      );
+      Navigator.pushReplacementNamed(context, '/login');
     });
   }
 

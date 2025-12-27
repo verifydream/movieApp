@@ -1,15 +1,8 @@
-//import 'dart:async';
 import 'package:bookingnonton/halaman_detail.dart';
 import 'package:bookingnonton/halaman_detailBanner.dart';
 import 'package:bookingnonton/kategori.dart';
-import 'package:bookingnonton/login_view.dart';
 import 'package:flutter/material.dart';
-
 import 'package:carousel_slider/carousel_slider.dart';
-
-void main() {
-  runApp(MyApp());
-}
 
 class HomeView extends StatefulWidget {
   @override
